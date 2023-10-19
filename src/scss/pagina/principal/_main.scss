@@ -1,0 +1,60 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__titulo {
+    @include m.nombre-pagina;
+    margin: 2rem 0;
+  }
+  &__imagen {
+    width: 40rem;
+    @include m.tablet {
+      width: auto;
+    }
+  }
+  &__contenedor {
+    @include m.grid(1, 1rem);
+    @include m.tablet {
+      @include m.grid(2, 2rem);
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__contenido {
+    @include m.contenedor;
+  }
+
+  &__texto {
+    line-height: 3rem;
+    font-weight: v.$delgada;
+    font-size: 1.6rem;
+    text-align: justify;
+    #texto-adicional {
+      display: none;
+    }
+  }
+  &__boton {
+    @include m.boton(v.$azul, v.$blanco);
+    @include m.tablet {
+      width: auto;
+    }
+  }
+  &__contenedor-imagenes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__contenedor-imagen {
+    display: none;
+    @include m.tablet {
+      display: block;
+      max-width: 50rem;
+      border-radius: 0.5rem;
+    }
+  }
+}

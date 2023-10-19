@@ -1,0 +1,18 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.contacto {
+  background-color: darken(v.$gris-claro, 10);
+  margin-top: 2rem;
+  padding: .1rem 0 2rem 0;
+  &__contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  &__titulo{
+    font-weight: v.$bold;
+  }
+}

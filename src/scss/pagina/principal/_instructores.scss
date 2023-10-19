@@ -1,0 +1,50 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.instructores {
+  &__contenedor {
+    @include m.contenedor;
+    @include m.grid(1, 1rem);
+    @include m.tablet {
+      @include m.grid(3, 1rem);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    border-radius: 0.5rem;
+    &-titulo {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-top: 2.5rem;
+      color: darken(v.$azul, 20);
+      font-weight: v.$bold;
+    }
+  }
+  &__lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    &-cursos{
+      text-align: left;
+      margin-left: 2rem;
+      list-style-type: disc;
+    }
+  }
+}
+.lista__item {
+  margin-top: 1rem;
+}
+.letra-azul{
+    color: v.$azul;
+    font-weight: v.$bold;
+}
+.letra-amarilla{
+  color: #fbab18;
+  font-weight: v.$bold;
+}

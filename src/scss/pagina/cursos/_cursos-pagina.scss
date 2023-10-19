@@ -1,0 +1,58 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+.curso-rs {
+  width: 100%;
+  height: 36rem;
+  object-fit: cover;
+}
+.cursos__container {
+  margin-top: 3rem;
+}
+.cursos__curso {
+  margin-bottom: 10rem;
+}
+.main__titulo-cursos {
+  margin: 0;
+  @include m.texto-fluido(1rem, 4rem);
+  color: v.$blanco;
+}
+.cursos__header {
+  background-color: v.$gris-oscuro;
+  height: auto;
+  padding: 3rem;
+  &-right {
+    display: none;
+  }
+  @include m.tablet {
+    @include m.grid(2, 2rem);
+    padding: 0;
+    align-items: center;
+    height: 36rem;
+    justify-content: center;
+    &-right {
+      display: block;
+      height: auto;
+    }
+  }
+}
+
+.curso__informacion {
+  @include m.contenedor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  @include m.tablet {
+    height: auto;
+    @include m.grid(2, 2rem);
+    margin-top: 5rem;
+  }
+
+  .texto {
+    text-align: justify;
+
+    &-negrita {
+      font-weight: v.$bold;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.cursos {
+  background-color: darken(v.$gris-claro, 10);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  padding-bottom: 5rem;
+  &__contenedor {
+    @include m.contenedor;
+    @include m.grid(1, 1rem);
+    @include m.tablet {
+      @include m.grid(3, 1rem);
+    }
+  }
+  &__boton {
+    @include m.boton(v.$azul, v.$blanco);
+    margin-top: 2rem;
+    @include m.tablet {
+      width: max-content;
+      justify-self: center;
+      grid-column: 2;
+      grid-row: 2;
+    }
+  }
+}
