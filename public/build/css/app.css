@@ -513,6 +513,11 @@ h3 {
   }
 }
 
+.subtitulo {
+  font-weight: 300;
+  text-align: center;
+}
+
 .cursos {
   background-color: #d4e1ed;
   display: flex;
@@ -953,5 +958,28 @@ h3 {
 }
 .datacamp__instructores--lista {
   text-align: left;
+}
+
+.notas {
+  width: min(95%, 90rem);
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.notas__lista {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.notas__nota {
+  line-height: 3rem;
+  text-align: justify;
+  font-weight: 700;
+  font-style: italic;
+}
+.notas__relacion {
+  font-weight: 700;
 }
 /*# sourceMappingURL=app.css.map */
