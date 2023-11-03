@@ -762,8 +762,11 @@ h3 {
   height: auto;
   padding: 3rem;
 }
-.cursos__header-right {
+.cursos__header-right, .cursos__header-left--ocultar {
   display: none;
+}
+.cursos__header-right--mostrar {
+  display: block;
 }
 @media (min-width: 768px) {
   .cursos__header {

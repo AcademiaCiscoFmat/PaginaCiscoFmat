@@ -20,8 +20,12 @@
   background-color: v.$gris-oscuro;
   height: auto;
   padding: 3rem;
-  &-right {
+  &-right,
+  &-left--ocultar {
     display: none;
+  }
+  &-right--mostrar{
+    display: block;
   }
   @include m.tablet {
     @include m.grid(2, 2rem);
@@ -50,7 +54,6 @@
 
   .texto {
     text-align: justify;
-
     &-negrita {
       font-weight: v.$bold;
     }
