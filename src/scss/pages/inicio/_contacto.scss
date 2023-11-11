@@ -1,0 +1,18 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contacto{
+    background-color: darken(v.$gris-claro, 10);
+    padding: 2rem 0;
+    &__titulo{
+        @include m.texto-fluido(1.8rem, 2rem);
+    }
+    &__detalles{
+        width: 90%;
+        margin: 2rem auto 0 auto;
+    }
+    &__nombre,
+    &__email{
+        text-align: center;
+    }
+}

@@ -1,0 +1,37 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.letra-amarilla{
+    color: v.$amarillo;
+}
+.seccion-titulo{
+    font-weight: v.$bold;
+    text-align: center;
+}
+.texto{
+    font-weight: v.$delgada;
+    text-align: justify;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin: 0;
+    &--subtitulo{
+        font-size:2rem;
+        text-align: center;
+    }
+    &--regular{
+        font-weight: v.$regular;
+    }
+    &--delgado{
+        font-weight: v.$delgada;
+    }
+    &--negrita{
+        font-weight:v.$bold;
+    }
+}
+.letra-azul{
+    color: v.$azul;
+    &--bold{
+        font-weight: v.$bold;
+        color: v.$gris-oscuro;;
+    }
+}

@@ -13,38 +13,33 @@
     <title>Cisco Networking Academy - FMAT-UADY</title>
   </head>
   <body>
-    <nav class="navegacion">
-      <a href="index.html" class="navegacion__enlace navegacion__enlace--activo">Inicio</a>
-      <a href="academia-redes.html" class="navegacion__enlace">CISCO-FMAT</a>
-      <a href="cursos.html" class="navegacion__enlace"
-        >Cursos Base / Otros Cursos</a
-      >
-      <a href="cursos-proximos.html" class="navegacion__enlace"
-        >Proximos Cursos</a
-      >
-      <a href="datacamp.html" class="navegacion__enlace">DataCamp 2023</a>
-      <!-- <a href="#instructores" class="navegacion__enlace">Instructores</a>
-      <a href="#contacto" class="navegacion__enlace">Contacto</a> -->
+    <nav class="nav">
+      <input type="checkbox" id="menu" />
+      <div class="nav__links">
+        <a href="index.html" class="nav__link nav__link--activo">Inicio</a>
+        <a href="ciscofmat.html" class="nav__link">CISCO-FMAT</a>
+        <a href="cursos.html" class="nav__link">Cursos Base / Otros Cursos</a>
+        <a href="proximos-cursos.html" class="nav__link">Proximos Cursos</a>
+        <a href="datacamp.html" class="nav__link">DataCamp 2023</a>
+      </div>
+      <label for="menu" class="nav__label"></label>
     </nav>
     <header class="header">
-      <div class="header__contenido">
-        <h1 class="header__logo letra-amarilla">
-          Cisco Networking Academy <br />
-          Facultad de Matemáticas UADY
-        </h1>
-      </div>
+      <figure class="header__figure">
+        <img
+          src="public/build/img/cisco.png"
+          alt="Logo del cisco"
+          class="header__img"
+        />
+      </figure>
+      <h1 class="header__titulo letra-amarilla">
+        Facultad de Matemáticas UADY
+      </h1>
     </header>
-
-    <main class="main">
-      <!-- <h2 class="main__titulo letra-amarilla">La academia de redes CISCO</h2> -->
-      <!-- <img
-        src="public/build/img/fmatcisco.webp"
-        class="main__imagen"
-        alt="fmat-cisco"
-      /> -->
-      <div class="main__contenedor">
-        <div class="main__contenido">
-          <p class="main__texto">
+    <main class="informacion">
+      <section class="informacion__grid">
+        <div class="informacion__contenido">
+          <p class="texto">
             Cisco Networking Academy es un programa de responsabilidad social
             corporativa de Cisco, que promueve el desarrollo de destrezas y la
             formación profesional en TI disponible para entidades educativas y
@@ -56,187 +51,162 @@
             computadoras, así como otros conocimientos y habilidades, tales como
             la resolución de problemas, la colaboración y el pensamiento
             crítico.
-            <span id="texto-adicional">
-              Hoy en día el programa Networking Academy se ha extendido a más de
-              165 países, cuenta con más de 1 millón de estudiantes inscritos en
-              más de 10,000 academias en escuelas secundarias, escuelas
-              técnicas, preparatorias, universidades y organizaciones
-              comunitarias. Cisco Networking Academy es el programa de
-              desarrollo de destrezas de TI y formación profesional que conecta
-              a millones de estudiantes, educadores y profesionales en todo el
-              mundo. La Facultad de Matemáticas de la Universidad Autónoma de
-              Yucatán es Academia de Redes Cisco desde julio del 2008. La
-              alianza con Cisco nos ha brindado la oportunidad de ofrecer
-              recursos para la formación tecnológica de instructores y alumnos
-              de la comunidad de la Cisco Networking Academy y con ello
-              consolidar el liderazgo de la Universidad en el área de las redes
-              de computadoras. El programa proporciona contenido basado en la
-              Web, pruebas en línea, seguimiento del desempeño de los
-              estudiantes, laboratorios en vivo, soporte y entrenamiento por
-              parte de los instructores y preparación para las certificaciones
-              estándares de la industria incluyendo la de Cisco Certified
-              Network Associate (CCNA). En los cursos, los alumnos realizan
-              actividades de aprendizaje realistas y simulaciones de red para
-              desarrollar habilidades prácticas que les ayudarán a cubrir una
-              necesidad creciente de profesionales de redes en todo el mundo.
-              Los contenidos y programas de la Networking Academy se integran
-              dentro de nuestra oferta educativa con lo que se crea un espacio
-              para que la comunidad universitaria tenga la oportunidad de crecer
-              en un ambiente donde el uso y práctica de las nuevas tecnologías
-              es algo común, dándoles la posibilidad de experimentar un
-              crecimiento profesional que se verá reflejado al momento en que
-              nuestros alumnos se conviertan en profesionistas. Los alumnos
-              estudian simultáneamente los cursos de su carrera, así como los
-              cursos de certificación de la academia Cisco, de modo que al
-              concluir sus estudios obtengan su título universitario y también
-              estén preparados para obtener una certificación de competencias
-              tecnológicas de reconocimiento internacional.
-            </span>
           </p>
-          <a href="academia-redes.html" class="main__boton">Leer más</a>
+          <a href="ciscofmat.html" class="enlace informacion__enlace">Leer Más</a>
         </div>
-        <div class="main__contenedor-imagenes">
+        <div class="informacion__imagen">
           <img
             src="public/build/img/lab_redes2.jpeg"
-            class="main__contenedor-imagen"
+            class="informacion__img"
             alt="redes fmat"
           />
         </div>
-      </div>
+      </section>
     </main>
     <section class="cursos">
-      <h2 class="main__titulo letra-amarilla">Cursos</h2>
-      <div class="cursos__contenedor">
-        <div class="card">
-          <img
-            src="public/build/img/curso1.webp"
-            class="card__imagen"
-            alt="imagen del curso"
-          />
-          <p class="card__titulo">Cursos de CCNA Routing and Switching</p>
-          <p class="card__descripcion">
-            La currícula de CCNA Routing and Switching es el programa de cursos
-            principal que sirve de base para incursionar en otras áreas de
-            conocimiento en redes y tecnologías, es una puerta para empleos de
-            nivel básico en redes y carreras profesionales en TI.
-          </p>
+      <h2 class="seccion-titulo letra-amarilla">Cursos</h2>
+      <div class="cursos__grid">
+        <div class="cursos__curso-card">
+          <figure class="cursos__figure">
+            <img
+              src="public/build/img/curso1.webp"
+              alt="Imagen de curso de Routing & Switching"
+              class="cursos__img"
+            />
+          </figure>
+          <div class="cursos__detalles">
+            <p class="texto texto--subtitulo cursos__titulo letra-azul">
+              Cursos de CCNA Routing & Switching
+            </p>
+            <p class="texto cursos__informacion">
+              La currícula de CCNA Routing and Switching es el programa de
+              cursos principal que sirve de base para incursionar en otras áreas
+              de conocimiento en redes y tecnologías, es una puerta para empleos
+              de nivel básico en redes y carreras profesionales en TI.
+            </p>
+          </div>
         </div>
-        <div class="card">
-          <img
-            src="public/build/img/curso2.webp"
-            class="card__imagen"
-            alt="imagen del curso"
-          />
-          <p class="card__titulo">IT Essentials</p>
-          <p class="card__descripcion">
-            El curso IT Essentials (Fundamentos de TI) cubre las destrezas
-            informáticas fundamentales para empleos en TI de nivel básico. IT
-            Essentials incluye prácticas de laboratorio que proporcionan
-            experiencia real que lo preparará para las redes empresariales.
-          </p>
+        <!--Termina el primer curso-->
+        <div class="cursos__curso-card">
+          <figure class="cursos__figure">
+            <img
+              src="public/build/img/curso2.webp"
+              alt="Imagen de curso de Routing & Switching"
+              class="cursos__img"
+            />
+          </figure>
+          <div class="cursos__detalles">
+            <p class="texto texto--subtitulo cursos__titulo letra-azul">
+              IT Essentials
+            </p>
+            <p class="texto cursos__informacion">
+              El curso IT Essentials (Fundamentos de TI) cubre las destrezas
+              informáticas fundamentales para empleos en TI de nivel básico. IT
+              Essentials incluye prácticas de laboratorio que proporcionan
+              experiencia real que lo preparará para las redes empresariales.
+            </p>
+          </div>
         </div>
-        <div class="card">
-          <img
-            src="public/build/img/curso3.jpeg"
-            class="card__imagen"
-            alt="imagen del curso"
-          />
-          <p class="card__titulo">Otros cursos</p>
-          <p class="card__descripcion">
-            Los alumnos e instructores de Academias Cisco tienen acceso a otros
-            cursos que promueven el desarrollo de destrezas y la formación
-            profesional en TI. Los cursos de autoinscripción de Cisco Networking
-            Academy están diseñados para que el estudiante pueda hacerlos a su
-            propio ritmo, en cualquier momento de su carrera profesional.
-          </p>
+        <!--Termina el segundo curso-->
+        <div class="cursos__curso-card cursos__curso-card--centrado">
+          <figure class="cursos__figure">
+            <img
+              src="public/build/img/curso3.webp"
+              alt="Imagen de curso de Routing & Switching"
+              class="cursos__img"
+            />
+          </figure>
+          <div class="cursos__detalles">
+            <p class="texto texto--subtitulo cursos__titulo letra-azul">
+              Otros cursos
+            </p>
+            <p class="texto cursos__informacion">
+              Los alumnos e instructores de Academias Cisco tienen acceso a
+              otros cursos que promueven el desarrollo de destrezas y la
+              formación profesional en TI. Los cursos de autoinscripción de
+              Cisco Networking Academy están diseñados para que el estudiante
+              pueda hacerlos a su propio ritmo, en cualquier momento de su
+              carrera profesional.
+            </p>
+          </div>
         </div>
-        <a href="cursos.html" class="cursos__boton">Conocer más</a>
+        <!--Termina el tercer curso-->
+        <a href="cursos.html" class="enlace cursos__enlace">Conocer más</a>
       </div>
     </section>
-
-    <section class="instructores" id="instructores">
-      <h2 class="main__titulo letra-amarilla">Instructores</h2>
-      <div class="instructores__contenedor">
-        <div class="instructores__card">
-          <ul class="instructores__lista">
-            <li class="lista__item">
-              <span class="letra-azul">E</span>nrique
-              <span class="letra-azul">A</span>yala
-              <span class="letra-azul">F</span>ranco
-            </li>
-            <li class="lista__item">
-              <span class="letra-azul">S</span>ergio
-              <span class="letra-azul">C</span>ervera
-              <span class="letra-azul">L</span>oeza
-            </li>
-          </ul>
-        </div>
-        <div class="instructores__card">
-          <ul class="instructores__lista">
-            <li class="lista__item">
-              <span class="letra-azul">L</span>uis
-              <span class="letra-azul">F</span>ernando
-              <span class="letra-azul">C</span>uri
-              <span class="letra-azul">Q</span>uintal
-            </li>
-            <li class="lista__item">
-              <span class="letra-azul">L</span>uis
-              <span class="letra-azul">R</span>amiro
-              <span class="letra-azul">B</span>asto
-              <span class="letra-azul">D</span>íaz
-            </li>
-            <li class="lista__item">
-              <span class="letra-azul">W</span>ilberth de
-              <span class="letra-azul">J</span>esús
-              <span class="letra-azul">P</span>érez
-              <span class="letra-azul">S</span>egura
-            </li>
-          </ul>
-        </div>
-
-        <div class="instructores__card">
-          <ul class="instructores__lista">
-            <li class="lista__item">
-              <span class="letra-azul">M</span>aria del
-              <span class="letra-azul">C</span>armen
-              <span class="letra-azul">Z</span>ozaya
-              <span class="letra-azul">A</span>yuso
-            </li>
-            <li class="lista__item">
-              <span class="letra-azul">V</span>íctor
-              <span class="letra-azul">M</span>anuel
-              <span class="letra-azul">C</span>hi
-              <span class="letra-azul">P</span>ech
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="contacto" id="contacto">
-      <h2 class="main__titulo letra-amarilla">Contacto</h2>
-      <div class="contacto__contenedor">
-        <p class="contacto__titulo">
-          Encargado Principal de la Academia CISCO en FMAT
-        </p>
+    <section class="instructores">
+      <h2 class="seccion-titulo letra-amarilla">Instructores</h2>
+      <div class="instructores__listas">
         <ul class="instructores__lista">
-          <li class="lista__item">
-            <span class="letra-azul">Nombre: </span>Enrique Ayala Franco
+          <li class="instructores__nombres texto">
+            <span class="letra-azul texto--regular">E</span>nrique
+            <span class="letra-azul texto--regular">A</span>yala
+            <span class="letra-azul texto--regular">F</span>ranco
           </li>
-          <li class="lista__item">
-            <span class="letra-azul">Correo electrónico: </span
-            >enrique.ayala@correo.uady.mx
+          <li class="instructores__nombres texto">
+            <span class="letra-azul texto--regular">S</span>ergio
+            <span class="letra-azul texto--regular">C</span>ervera
+            <span class="letra-azul texto--regular">L</span>oeza
+          </li>
+        </ul>
+        <ul class="instructores__lista">
+          <li class="instructores__nombres texto">
+            <span class="letra-azul texto--regular">M</span>aria del
+            <span class="letra-azul texto--regular">C</span>armen
+            <span class="letra-azul texto--regular">Z</span>ozaya
+            <span class="letra-azul texto--regular">A</span>yuso
+          </li>
+          <li class="instructores__nombres texto">
+            <span class="letra-azul texto--regular">V</span>íctor
+            <span class="letra-azul texto--regular">M</span>anuel
+            <span class="letra-azul texto--regular">C</span>hi
+            <span class="letra-azul texto--regular">P</span>ech
+          </li>
+        </ul>
+        <ul class="instructores__lista">
+          <li class="instructores__nombres texto">
+            <span class="letra-azul texto--regular">L</span>uis
+            <span class="letra-azul texto--regular">F</span>ernando
+            <span class="letra-azul texto--regular">C</span>uri
+            <span class="letra-azul texto--regular">Q</span>uintal
+          </li>
+          <li class="instructores__nombres texto">
+            <span class="letra-azul texto--regular">L</span>uis
+            <span class="letra-azul texto--regular">R</span>amiro
+            <span class="letra-azul texto--regular">B</span>asto
+            <span class="letra-azul texto--regular">D</span>íaz
+          </li>
+          <li class="instructores__nombres texto">
+            <span class="letra-azul texto--regular">W</span>ilberth de
+            <span class="letra-azul texto--regular">J</span>esús
+            <span class="letra-azul texto--regular">P</span>érez
+            <span class="letra-azul texto--regular">S</span>egura
           </li>
         </ul>
       </div>
     </section>
-
+    <section class="contacto">
+      <h2 class="seccion-titulo letra-amarilla">Contacto</h2>
+      <p class="texto texto--subtitulo texto--regular contacto__titulo">
+        Encargado Principal de la Academia de CISCO en FMAT
+      </p>
+      <div class="contacto__detalles">
+        <p class="contacto__nombre texto">
+          <span class="letra-azul texto--regular">Nombre: </span>Enrique Ayala
+          Franco
+        </p>
+        <p class="contacto__email texto">
+          <span class="letra-azul texto--regular">E-mail: </span
+          >enrique.ayala@correo.uady.mx
+        </p>
+      </div>
+    </section>
     <footer class="footer">
-      <p class="footer__texto">
-        <span id="year"></span> - Facultad de Matemáticas - Universidad Autónoma
-        de Yucatán
+      <p class="footer__texto texto">
+        &copy; <span id="year"></span> Facultad de Matemáticas Universidad
+        Autónoma de Yucatán
       </p>
     </footer>
-    <script src="public/build/js/bundle.min.js"></script>
   </body>
+  <script src="public/build/js/bundle.min.js"></script>
 </html>
