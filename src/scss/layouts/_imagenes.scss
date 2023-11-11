@@ -1,0 +1,20 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.img-lg{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.img-md{
+width: 50rem;
+height: auto;
+object-fit: cover;
+}
+
+.img-sm{
+    width: 35rem;
+    height: auto;
+    object-fit: cover;
+}

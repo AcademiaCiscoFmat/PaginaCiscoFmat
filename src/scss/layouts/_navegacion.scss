@@ -1,0 +1,84 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.nav {
+  background-color: v.$gris-oscuro;
+  padding: 0 1rem;
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  @include m.desktop {
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    height: 5rem;
+  }
+
+  &__links {
+    position: absolute;
+    background-color: v.$gris-oscuro;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    clip-path: circle(0% at top right);
+    transition: clip-path 1s;
+    @include m.desktop {
+      position: static;
+      clip-path: unset;
+      background-color: transparent;
+      flex-direction: row;
+      gap: 1rem;
+      justify-content: space-evenly;
+      width: 100%;
+      transition: unset;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: v.$blanco;
+    text-transform: uppercase;
+
+    &--activo {
+      color: v.$amarillo;
+      font-weight: v.$bold;
+    }
+    @include m.desktop {
+      transition: all 0.3s ease;
+      &:hover {
+        color: v.$amarillo;
+      }
+    }
+  }
+
+  &__label {
+    display: block;
+    cursor: pointer;
+    width: 3rem;
+    height: 3.5rem;
+    background-image: url(../img/menu.svg);
+    z-index: 10;
+    background-size: cover;
+    @include m.desktop {
+      display: none;
+    }
+  }
+}
+
+[id="menu"] {
+  display: none;
+
+  &:checked ~ .nav__links {
+    clip-path: circle(150% at top right);
+  }
+  &:checked ~ .nav__label {
+    background-image: url(../img/cerrar.svg);
+  }
+}

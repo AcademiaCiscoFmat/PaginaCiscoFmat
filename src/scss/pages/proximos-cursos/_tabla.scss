@@ -1,0 +1,41 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+.proximos-cursos {
+  &__titulo {
+    margin-top: 2rem;
+  }
+}
+.table {
+  border-collapse: collapse;
+  overflow-x: scroll;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  display:block;
+  &__thead,
+  &__enlace {
+    background-color: v.$gris-oscuro;
+  }
+  &__fila {
+    color: v.$blanco;
+    &:nth-child(even) {
+      background-color: darken(v.$gris-claro, 10);
+    }
+  }
+  &__dato {
+    padding: 1rem;
+    text-align: left;
+    &--tbody {
+      color: v.$negro;
+      font-size: 1.5rem;
+    }
+    &:nth-child(2),
+    &:nth-child(7) {
+      display: none;
+    }
+    @include m.desktop {
+      &:nth-child(2){
+        display:table-cell;
+      }
+    }
+  }
+}

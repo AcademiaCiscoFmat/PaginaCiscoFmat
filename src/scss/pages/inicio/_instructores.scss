@@ -1,0 +1,37 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.instructores{
+    padding: 2rem 0;
+    @include m.contenedor;
+    &__listas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include m.tablet {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        @include m.desktop {
+            margin-top: 1rem;
+            justify-content: space-evenly;
+        }
+    }
+    &__lista{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        line-height: 1.5;
+        @include m.tablet {
+            width: 40%;
+        }
+        @include m.desktop {
+            width: unset;
+        }
+    }
+    &__nombres{
+        text-align: center;
+    }
+}
