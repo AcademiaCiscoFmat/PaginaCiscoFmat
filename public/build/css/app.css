@@ -920,7 +920,7 @@ h3 {
   color: #1a1b15;
   font-size: 1.5rem;
 }
-.table__dato:nth-child(2), .table__dato:nth-child(7) {
+.table__dato:nth-child(2) {
   display: none;
 }
 @media (min-width: 1024px) {
