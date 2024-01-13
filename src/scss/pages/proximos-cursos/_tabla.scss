@@ -28,8 +28,7 @@
       color: v.$negro;
       font-size: 1.5rem;
     }
-    &:nth-child(2),
-    &:nth-child(7) {
+    &:nth-child(2){
       display: none;
     }
     @include m.desktop {
